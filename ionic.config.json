@@ -1,0 +1,7 @@
+{
+  "name": "miFistApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
