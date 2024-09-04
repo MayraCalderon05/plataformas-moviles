@@ -1,20 +1,21 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+<ion-header [translucent]="true" > <!-- cabecera del header -->
+  <ion-toolbar color="success"> <!-- barra de herramientas -->
+    <ion-title > <!-- es un componente que sobreentiende que es un titulo por eso no se pone un h1-->
+      Whatsapp
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-button (click)="setAction(true)" >click aquí</ion-button>
+  <!-- is open verifica y valida la variable mostrar-->
+   <!-- header es el titulo-->
+    <!--didDimiss hace que cuando toque cualquier parte de la pantalla que saque la opción-->
+  <ion-action-sheet [isOpen]="mostrar" header="Opciones" [buttons]="botones" (didDismiss)="setAction(false)">
+    
+  </ion-action-sheet>
+  <ion-alert [isOpen]="mostrarAlert" header="Acción requerida" message="¿Estás seguro de querer cancelar?" [buttons]="botonesAlert" (didDismiss)="setAlert(false)">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  </ion-alert>
+  
 </ion-content>
